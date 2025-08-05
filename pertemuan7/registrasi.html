@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form registrasi</title>
+</head>
+
+<body>
+    <h1>registrasi form</h1>
+    <div>
+        <form action="contact.php" method="post">
+            <fieldset>
+                <legend>registrasi</legend>
+                <div>
+                    <label>name</label>
+                    <input type="text" name="name" placeholder="name...">
+                </div>
+                <div>
+                    <label>Username</label>
+                    <input type="text" name="Username" placeholder="username...">
+                </div>
+                <div>
+                    <label>email</label>
+                    <input type="email" name="email" placeholder="email....">
+                </div>
+                <div>
+                    <label>password</label>
+                    <input type="password" name="password" placeholder="password.....">
+                </div>
+                <div>
+                    <label>jenis kelamin</label>
+                    <br><label><input type="radio" name="jenis kelamin" value="laki-laki" />laki-laki</label>
+                    <br><label><input type="radio" name="jenis kelamin" value="perempuan" />perempuan</label>
+                </div>
+                <div>
+                    <label>agama</label>
+
+                    <select name="agama">
+                        <option>pilih</option>
+                        <option value="islam">islam</option>
+                        <option value="kristen">kristen</option>
+                        <option value="hindu">hindu</option>
+                        <option value="budha">budha</option>
+                    </select>
+
+                </div>
+                <div>
+                    <label>biografi</label>
+                    <textarea name="biografi"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="submit" value="daftar" />
+                </div>
+            </fieldset>
+        </form>
+
+
+    </div>
+</body>
+
+</html>
