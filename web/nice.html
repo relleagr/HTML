@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghaisan Raqilla Manan - Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.5s ease;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #000000 0%, #121212 50%, #ff00aa 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            color: #ff00aa;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 50px;
+            height: 3px;
+            background-color: #ff00aa;
+            transform-origin: left;
+            animation: fadeInLeft 0.5s ease-out forwards;
+        }
+        
+        @keyframes fadeInLeft {
+            from { transform: scaleX(0); opacity: 0; }
+            to { transform: scaleX(1); opacity: 1; }
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px) !important;
+        }
+        
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 0, 170, 0.1), rgba(0, 0, 0, 0.8));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover::before {
+            opacity: 1;
+        }
+        
+        .contact-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            border-color: #ff00aa;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary {
+            background-color: #ff00aa;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            background-color: #cc0088;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(30deg);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+        
+        .skill-bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 10px;
+            background: linear-gradient(90deg, #ff00aa, #ff66cc);
+            transform-origin: left;
+            animation: skillAnimation 1.5s ease-out forwards;
+        }
+        
+        @keyframes skillAnimation {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 0, 170, 0.2);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff00aa;
+            border-radius: 4px;
+        }
+        
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 10% 20%, rgba(255, 0, 170, 0.15) 0%, rgba(0, 0, 0, 0) 30%),
+                        radial-gradient(circle at 90% 80%, rgba(255, 0, 170, 0.15) 0%, rgba(0, 0, 0, 0) 30%);
+            animation: pulse 15s infinite alternate, float 20s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-5%, 5%);
+            }
+            50% {
+                transform: translate(-10%, 0);
+            }
+            75% {
+                transform: translate(-5%, -5%);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid #ff00aa;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #ff00aa; }
+        }
+        
+        /* Floating animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Slide in from left */
+        @keyframes slideInLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Slide in from right */
+        @keyframes slideInRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Slide in from bottom */
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Pulse animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Zoom in animation */
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Rotate animation */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Custom animation classes */
+        .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease-out forwards; }
+        .animate-slideInUp { animation: slideInUp 0.8s ease-out forwards; }
+        .animate-pulse { animation: pulse 2s infinite; }
+        .animate-zoomIn { animation: zoomIn 0.6s ease-out forwards; }
+        .animate-rotate { animation: rotate 2s linear infinite; }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+        .delay-900 { animation-delay: 0.9s; }
+        .delay-1000 { animation-delay: 1s; }
+        
+        /* Scroll-activated animations */
+        [data-aos="custom-fade"] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        
+        [data-aos="custom-fade"].aos-animate {
+            opacity: 1;
+        }
+        
+        /* Custom scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator animate-bounce">
+        <div class="text-pink-500 text-2xl animate-pulse">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 md:px-12 lg:px-24" data-aos="fade-down">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold animate-slideInLeft">
+                <span class="text-white">GH</span><span class="text-pink-500">AISAN</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 animate-slideInRight">
+                <a href="#home" class="text-white hover:text-pink-500 transition duration-300">Home</a>
+                <a href="#about" class="text-white hover:text-pink-500 transition duration-300">About</a>
+                <a href="#services" class="text-white hover:text-pink-500 transition duration-300">Services</a>
+                <a href="#portfolio" class="text-white hover:text-pink-500 transition duration-300">Portfolio</a>
+                <a href="#skills" class="text-white hover:text-pink-500 transition duration-300">Skills</a>
+                <a href="#contact" class="text-white hover:text-pink-500 transition duration-300">Contact</a>
+            </div>
+            
+            <div class="md:hidden animate-slideInRight">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden absolute top-16 right-0 w-48 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg p-4 rounded-lg shadow-lg animate-slideInRight">
+                <a href="#home" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-100">Home</a>
+                <a href="#about" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-200">About</a>
+                <a href="#services" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-300">Services</a>
+                <a href="#portfolio" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-400">Portfolio</a>
+                <a href="#skills" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-500">Skills</a>
+                <a href="#contact" class="block py-2 text-white hover:text-pink-500 transition duration-300 animate-fadeIn delay-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16 px-6 md:px-12 lg:px-24">
+        <div class="w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-slideInLeft delay-100">
+                        Hi, I'm <span class="text-pink-500">Ghaisan</span>
+                    </h1>
+                    <div class="typewriter animate-fadeIn delay-200">
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-6">Creative Designer & Visual Artist</h2>
+                    </div>
+                    <p class="text-gray-300 mb-8 max-w-lg animate-fadeIn delay-300">
+                        I specialize in creating stunning visual experiences that captivate audiences and communicate brand stories effectively through thoughtful design.
+                    </p>
+                    <div class="flex space-x-4 animate-fadeIn delay-400">
+                        <a href="#portfolio" class="btn-primary px-8 py-3 rounded-lg font-medium text-white hover:scale-105 transition-transform duration-300">View My Work</a>
+                        <a href="#contact" class="px-8 py-3 rounded-lg font-medium text-white border border-pink-500 hover:bg-pink-500 hover:bg-opacity-10 transition duration-300 hover:scale-105">Hire Me</a>
+                    </div>
+                    <div class="mt-12 flex space-x-6 animate-fadeIn delay-500">
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 hover:scale-110">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 hover:scale-110">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 hover:scale-110">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative floating">
+                        <div class="absolute w-64 h-64 rounded-full bg-pink-500 opacity-20 filter blur-3xl top-0 right-0 animate-pulse"></div>
+                        <img src="https://placehold.co/600x800" alt="Portrait of Ghaisan Raqilla Manan wearing stylish black clothing with pink accents, standing in a modern studio setting with creative elements" class="w-full h-auto rounded-lg shadow-2xl border-4 border-pink-500 border-opacity-30 animate-zoomIn">
+                        <div class="absolute -bottom-6 -left-6 p-4 bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg border-l-4 border-pink-500 animate-slideInUp delay-300">
+                            <h3 class="text-white font-bold mb-1">5+ Years</h3>
+                            <p class="text-gray-300 text-sm">Design Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-12 lg:px-24">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">About Me</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">Learn more about the person behind the creative designs</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <img src="https://placehold.co/600x400" alt="Ghaisan working on design projects in a modern creative studio with pink neon lighting" class="w-full h-auto rounded-lg shadow-lg animate-zoomIn">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="100">
+                <h3 class="text-2xl font-bold mb-4 text-white animate-slideInUp delay-100">Who am I?</h3>
+                <p class="text-gray-300 mb-4 animate-slideInUp delay-200">
+                    I'm Ghaisan Raqilla Manan, a passionate designer with a love for creating visually stunning and functional designs. With a background in visual communication and years of industry experience, I bring a unique perspective to every project I work on.
+                </p>
+                <p class="text-gray-300 mb-6 animate-slideInUp delay-300">
+                    My design philosophy revolves around simplicity, elegance, and meaningful storytelling. I believe that good design should not only look beautiful but also solve problems and create connections between brands and their audiences.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8 animate-slideInUp delay-400">
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Name:</h4>
+                        <p class="text-gray-300">Ghaisan Raqilla Manan</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Email:</h4>
+                        <p class="text-gray-300">ghaisan@design.com</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Location:</h4>
+                        <p class="text-gray-300">Jakarta, Indonesia</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Freelance:</h4>
+                        <p class="text-gray-300">Available</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn-primary px-6 py-3 rounded-lg font-medium text-white inline-block hover:scale-105 transition-transform animate-slideInUp delay-500">Download CV</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 md:px-12 lg:px-24 bg-black bg-opacity-50">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">My Services</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">Comprehensive design solutions tailored to your needs</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-100" data-aos="fade-up">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">Brand Identity</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Creating cohesive visual identities that communicate your brand's essence and values through logos, color palettes, typography, and more.
+                </p>
+            </div>
+            
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">Web Design</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Crafting beautiful, responsive websites with intuitive user experiences that help your business thrive in the digital space.
+                </p>
+            </div>
+            
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">UI/UX Design</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Designing interfaces that are not only visually appealing but also highly functional and user-friendly for web and mobile applications.
+                </p>
+            </div>
+            
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-400" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">Graphic Design</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Producing high-quality print and digital materials including brochures, banners, social media graphics, and marketing collateral.
+                </p>
+            </div>
+            
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-500" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">Motion Graphics</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Bringing designs to life with engaging animations and motion graphics for social media, websites, and presentations.
+                </p>
+            </div>
+            
+            <div class="service-card bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 transition duration-500 animate-slideInUp delay-600" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-pink-500 text-4xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white animate-slideInLeft delay-200">Design Consulting</h3>
+                <p class="text-gray-300 animate-slideInLeft delay-300">
+                    Providing strategic design direction and solutions to help businesses establish or refine their visual communication.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 md:px-12 lg:px-24">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">Portfolio</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">A selection of my best design projects</p>
+        </div>
+        
+        <div class="flex justify-center mb-8 animate-slideInUp delay-100" data-aos="fade-up">
+            <div class="flex flex-wrap space-x-2">
+                <button class="filter-btn px-4 py-2 rounded-full text-white border border-pink-500 hover:bg-pink-500 transition duration-300 active" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-white border border-gray-700 hover:bg-pink-500 hover:border-pink-500 transition duration-300" data-filter="branding">Branding</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-white border border-gray-700 hover:bg-pink-500 hover:border-pink-500 transition duration-300" data-filter="web">Web</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-white border border-gray-700 hover:bg-pink-500 hover:border-pink-500 transition duration-300" data-filter="uiux">UI/UX</button>
+                <button class="filter-btn px-4 py-2 rounded-full text-white border border-gray-700 hover:bg-pink-500 hover:border-pink-500 transition duration-300" data-filter="graphic">Graphic</button>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-100" data-category="branding" data-aos="fade-up">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Modern minimalist branding project for a luxury skincare line with soft pink and gold accents" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">LUXE Skincare</h3>
+                    <p class="text-gray-300 mb-4">Complete brand identity for a premium skincare line</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-200">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-300"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-200" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Dark themed e-commerce website design for a fashion retailer with bold typography and pink highlights" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">NOVA Fashion</h3>
+                    <p class="text-gray-300 mb-4">E-commerce website redesign</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-300">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-400"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-300" data-category="uiux" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Mobile app dashboard interface for a fitness tracking application with clean lines and motivational pink accents" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">FitTrack App</h3>
+                    <p class="text-gray-300 mb-4">Fitness mobile app UI/UX design</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-400">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-500"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-400" data-category="graphic" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Series of bold poster designs for a music festival with abstract geometric patterns in black and hot pink" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">NEON Festival</h3>
+                    <p class="text-gray-300 mb-4">Event promotional materials</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-500">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-600"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 5 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-500" data-category="branding" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Sophisticated coffee shop branding with elegant typography and a rich dark color palette accented with soft pink" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Brew & Co</h3>
+                    <p class="text-gray-300 mb-4">Specialty coffee branding</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-600">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-700"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 6 -->
+            <div class="portfolio-item bg-black bg-opacity-50 rounded-lg overflow-hidden border border-gray-800 animate-slideInUp delay-600" data-category="uiux" data-aos="fade-up" data-aos-delay="500">
+                <div class="portfolio-image">
+                    <img src="https://placehold.co/600x400" alt="Financial banking application with a clean interface featuring data visualizations and a professional color scheme with pink highlights" class="w-full h-auto">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">FIBank App</h3>
+                    <p class="text-gray-300 mb-4">Mobile banking user interface</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-300 font-medium flex items-center animate-slideInLeft delay-700">
+                        View Project <i class="fas fa-arrow-right ml-2 animate-slideInLeft delay-800"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 animate-slideInUp delay-700" data-aos="fade-up">
+            <a href="#" class="btn-primary px-8 py-3 rounded-lg font-medium text-white inline-block hover:scale-105 transition-transform">View All Projects</a>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-12 lg:px-24 bg-black bg-opacity-50">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">My Skills</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">Professional expertise and technical capabilities</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-8 text-white animate-slideInUp delay-100">Design Skills</h3>
+                
+                <div class="mb-6 animate-slideInUp delay-200">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">UI/UX Design</span>
+                        <span class="text-pink-500">95%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-300">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Brand Identity</span>
+                        <span class="text-pink-500">90%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-400">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Web Design</span>
+                        <span class="text-pink-500">85%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-500">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Graphic Design</span>
+                        <span class="text-pink-500">88%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold mb-8 text-white animate-slideInUp delay-100">Technical Skills</h3>
+                
+                <div class="mb-6 animate-slideInUp delay-200">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Adobe Creative Suite</span>
+                        <span class="text-pink-500">93%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 93%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-300">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Figma</span>
+                        <span class="text-pink-500">96%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 96%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-400">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">Blender</span>
+                        <span class="text-pink-500">75%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 animate-slideInUp delay-500">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-white font-medium">After Effects</span>
+                        <span class="text-pink-500">82%</span>
+                    </div>
+                    <div class="w-full skill-bar rounded-full h-2">
+                        <div class="skill-level rounded-full" style="width: 82%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center" data-aos="fade-up">
+            <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 animate-slideInUp delay-100">
+                <div class="text-pink-500 text-4xl mb-3 animate-slideInLeft delay-100">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-white mb-2 animate-slideInLeft delay-200">150+</h4>
+                <p class="text-gray-300 animate-slideInLeft delay-300">Projects</p>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 animate-slideInUp delay-200">
+                <div class="text-pink-500 text-4xl mb-3 animate-slideInLeft delay-100">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-white mb-2 animate-slideInLeft delay-200">120+</h4>
+                <p class="text-gray-300 animate-slideInLeft delay-300">Clients</p>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 animate-slideInUp delay-300">
+                <div class="text-pink-500 text-4xl mb-3 animate-slideInLeft delay-100">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-white mb-2 animate-slideInLeft delay-200">8</h4>
+                <p class="text-gray-300 animate-slideInLeft delay-300">Awards</p>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800 animate-slideInUp delay-400">
+                <div class="text-pink-500 text-4xl mb-3 animate-slideInLeft delay-100">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-white mb-2 animate-slideInLeft delay-200">1000+</h4>
+                <p class="text-gray-300 animate-slideInLeft delay-300">Coffee Cups</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 md:px-12 lg:px-24">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">Client Testimonials</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">What my clients say about my work</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 animate-slideInUp delay-100" data-aos="fade-up">
+                <div class="text-pink-500 text-2xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-gray-300 mb-6 animate-slideInLeft delay-200">
+                    Ghaisan transformed our brand identity completely. His attention to detail and creative vision resulted in a stunning visual identity that perfectly represents our values.
+                </p>
+                <div class="flex items-center animate-slideInLeft delay-300">
+                    <img src="https://placehold.co/60x60" alt="Portrait of Sarah Johnson, Marketing Director at TechFusion" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-white font-bold">Sarah Johnson</h4>
+                        <p class="text-gray-400">Marketing Director, TechFusion</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 animate-slideInUp delay-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-pink-500 text-2xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-gray-300 mb-6 animate-slideInLeft delay-200">
+                    The website Ghaisan designed for us exceeded all expectations. It's not just beautiful - it converted visitors into customers at a rate 30% higher than our old site.
+                </p>
+                <div class="flex items-center animate-slideInLeft delay-300">
+                    <img src="https://placehold.co/60x60" alt="Portrait of Michael Chen, Founder of UrbanNest" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-white font-bold">Michael Chen</h4>
+                        <p class="text-gray-400">Founder, UrbanNest</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 animate-slideInUp delay-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-pink-500 text-2xl mb-4 animate-slideInLeft delay-100">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="text-gray-300 mb-6 animate-slideInLeft delay-200">
+                    Working with Ghaisan on our app redesign was a game-changer. His user-centered approach resulted in an interface that's both stunning and incredibly intuitive to use.
+                </div>
+                <div class="flex items-center animate-slideInLeft delay-300">
+                    <img src="https://placehold.co/60x60" alt="Portrait of Elena Rodriguez, Product Manager at SwiftPay" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-white font-bold">Elena Rodriguez</h4>
+                        <p class="text-gray-400">Product Manager, SwiftPay</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 md:px-12 lg:px-24">
+        <div class="mb-16 text-center" data-aos="fade-up">
+            <h2 class="section-title text-3xl md:text-4xl font-bold inline-block mb-2">Get In Touch</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">Have a project in mind or want to collaborate? Let's talk</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-6 text-white animate-slideInUp delay-100">Contact Information</h3>
+                <p class="text-gray-300 mb-8 animate-slideInUp delay-200">
+                    Feel free to reach out to me for any questions, project proposals, or just to say hello. I'll get back to you as soon as possible.
+                </p>
+                
+                <div class="space-y-6 animate-slideInUp delay-300">
+                    <div class="flex items-start">
+                        <div class="text-pink-500 mr-4 mt-1 animate-slideInLeft delay-100">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 animate-slideInLeft delay-200">Location</h4>
+                            <p class="text-gray-300 animate-slideInLeft delay-300">Jakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="text-pink-500 mr-4 mt-1 animate-slideInLeft delay-200">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 animate-slideInLeft delay-300">Email</h4>
+                            <p class="text-gray-300 animate-slideInLeft delay-400">ghaisan@design.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="text-pink-500 mr-4 mt-1 animate-slideInLeft delay-300">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 animate-slideInLeft delay-400">Phone</h4>
+                            <p class="text-gray-300 animate-slideInLeft delay-500">+62 812 3456 7890</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 animate-slideInUp delay-400">
+                    <h4 class="text-white font-bold mb-4 animate-slideInLeft delay-400">Follow Me</h4>
+                    <div class="flex space-x-4 animate-slideInLeft delay-500">
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 text-xl hover:scale-110">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 text-xl hover:scale-110">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 text-xl hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 text-xl hover:scale-110">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300 text-xl hover:scale-110">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left">
+                <form id="contact-form" class="bg-black bg-opacity-50 p-8 rounded-lg border border-gray-800 animate-slideInUp delay-100">
+                    <div class="mb-6 animate-slideInLeft delay-100">
+                        <label for="name" class="block text-white mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full contact-input px-4 py-3 rounded-lg text-white focus:outline-none">
+                    </div>
+                    
+                    <div class="mb-6 animate-slideInLeft delay-200">
+                        <label for="email" class="block text-white mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full contact-input px-4 py-3 rounded-lg text-white focus:outline-none">
+                    </div>
+                    
+                    <div class="mb-6 animate-slideInLeft delay-300">
+                        <label for="subject" class="block text-white mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full contact-input px-4 py-3 rounded-lg text-white focus:outline-none">
+                    </div>
+                    
+                    <div class="mb-6 animate-slideInLeft delay-400">
+                        <label for="message" class="block text-white mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full contact-input px-4 py-3 rounded-lg text-white focus:outline-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full px-6 py-3 rounded-lg font-medium text-white hover:scale-105 transition-transform animate-slideInLeft delay-500">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-12 lg:px-24 bg-black bg-opacity-70" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="animate-slideInUp delay-100">
+                <div class="text-2xl font-bold mb-4 animate-slideInLeft delay-100">
+                    <span class="text-white">GH</span><span class="text-pink-500">AISAN</span>
+                </div>
+                <p class="text-gray-400 mb-4 animate-slideInLeft delay-200">
+                    A passionate designer creating meaningful visual experiences that tell stories and solve problems.
+                </p>
+                <div class="flex space-x-4 animate-slideInLeft delay-300">
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300 hover:scale-110">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300 hover:scale-110">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300 hover:scale-110">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300 hover:scale-110">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="animate-slideInUp delay-200">
+                <h3 class="text-white font-bold mb-4 text-lg animate-slideInLeft delay-100">Quick Links</h3>
+                <ul class="space-y-2 animate-slideInLeft delay-200">
+                    <li><a href="#home" class="text-gray-400 hover:text-pink-500 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-pink-500 transition duration-300">About</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-pink-500 transition duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="text-gray-400 hover:text-pink-500 transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-pink-500 transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="animate-slideInUp delay-300">
+                <h3 class="text-white font-bold mb-4 text-lg animate-slideInLeft delay-100">Newsletter</h3>
+                <p class="text-gray-400 mb-4 animate-slideInLeft delay-200">
+                    Subscribe to my newsletter for design tips, resources, and updates on my latest projects.
+                </p>
+                <form class="flex animate-slideInLeft delay-300">
+                    <input type="email" placeholder="Your email" class="contact-input px-4 py-3 rounded-l-lg text-white focus:outline-none flex-1">
+                    <button class="btn-primary px-4 py-3 rounded-r-lg hover:scale-105 transition-transform">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center animate-slideInUp delay-400">
+            <p class="text-gray-400 mb-4 md:mb-0 animate-slideInLeft delay-400">
+                &copy; 2023 Ghaisan Raqilla Manan. All rights reserved.
+            </p>
+            <div class="animate-slideInLeft delay-500">
+                <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300 mr-6">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 120
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('animate-slideInRight');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Portfolio filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => {
+                    btn.classList.remove('active', 'border-pink-500', 'bg-pink-500');
+                    btn.classList.add('border-gray-700');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.remove('border-gray-700');
+                btn.classList.add('active', 'border-pink-500', 'bg-pink-500');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transition = 'opacity 0.3s ease';
+                    
+                    setTimeout(() => {
+                        if(filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                        
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 50);
+                    }, 300);
+                });
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For demo purposes, we'll just show an alert
+            
+            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+            contactForm.reset();
+        });
+        
+        // Add typing effect to the hero section
+        const phrases = ["Creative Designer", "Visual Storyteller", "Brand Strategist", "UI/UX Specialist"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function type() {
+            const textElement = document.querySelector('.typewriter');
+            const currentPhrase = phrases[phraseIndex];
+            
+            if(isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                
+                if(charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                
+                if(charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000); // pause at end of phrase
+                    return;
+                }
+            }
+            
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(type, speed);
+        }
+        
+        // Animate elements when scrolling
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('[data-aos]');
+            
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if(position < windowHeight * 0.75) {
+                    element.classList.add('aos-animate');
+                }
+            });
+        }
+        
+        // Start animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000);
+            animateOnScroll();
+        });
+        
+        // Re-animate on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>

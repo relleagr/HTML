@@ -1,0 +1,15 @@
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+
+}
+p {
+    font-family: Arial;
+    line-height: 2em;
+}
+
+i {
+    font-family: sans-serif;
+    color: rgb(55, 0, 255);
+}
+

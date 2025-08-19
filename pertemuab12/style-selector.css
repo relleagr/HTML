@@ -1,0 +1,19 @@
+h1,
+h2,
+h3{
+    color: burlywood;
+    font-family: serif;
+}
+
+p{
+    color: rebeccapurple;
+}
+
+footer{
+    color: orangered;
+    background-color: black;
+}
+
+.bg-title{
+    background-color: black;
+}
