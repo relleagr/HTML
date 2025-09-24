@@ -1,0 +1,56 @@
+/** {
+    border: 1px solid rgb(0, 0, 0);
+}*/
+p {
+    color: blue;
+}
+
+div {
+    color: brown;
+}
+
+b {
+    font-size: 30px;
+}
+
+.pink {
+    color: aliceblue;
+    background: pink;
+    padding: 10px;
+    font-weight: 900;
+}
+.text-white{
+    color: white;
+    background: teal;
+    padding: 10px;
+}
+
+#header{
+    background: teal;
+    color: cyan;
+    padding: 50px;
+    border: 1px solid cyan;
+}
+input[type="text"] {
+    background: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    width: 500px;
+}
+a:hover{
+    color: teal;
+    background: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.iu:hover{
+    color: teal;
+    background: red;
+
+}
+p  {
+    color: magenta;
+}

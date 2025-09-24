@@ -1,0 +1,358 @@
+<<<<<<< HEAD
+/* a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    align-items: center;
+}
+nav{
+    margin-left: 50%;
+}
+
+
+
+.inlogo {
+    margin-left: 20px;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 590;
+    font-style: normal;
+}
+
+.content-img {
+    position: relative;
+    display: inline-block;
+    margin-left: 65%;
+    margin-top: 5%;
+    box-shadow: 08px 10px 20px  rgba(0, 0, 0, 0.5) ;
+    border-radius: 2%;
+
+
+}
+
+.content-img h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+    margin-top: 340px;
+}
+
+.yoman {
+    border-radius: 10px;
+} */
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 590;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(129, 129, 129);
+
+}
+
+.yoman {
+    border-radius: 5%;
+}
+
+.menu {
+    text-align: center;
+    letter-spacing: 10%;
+    word-spacing: 10px;
+
+
+}
+
+.abujar {
+    color: black;
+    font-size: 100px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.color {
+    color: rgb(0, 0, 99);
+}
+
+.color1 {
+    color: rgb(0, 99, 0);
+}
+
+.color:hover {
+    color: rgb(0, 99, 0);
+}
+
+.color1:hover {
+    color: rgb(0, 0, 99);
+}
+
+.daftar {
+    color: rgb(0, 99, 0);
+    background-color: white;
+    padding: 20px 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cont {
+    transition-delay: 5ms;
+}
+
+.visi {
+    animation-delay: 5ms;
+    display: grid;
+    gap: 0px;
+}
+
+.visi {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    margin: px auto;
+}
+
+.misi {
+    animation-delay: 5ms;
+    display: grid;
+    gap: 0px;
+}
+
+.misi {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    margin: px auto;
+}
+
+.log {
+text-align: center;
+}
+
+
+.content-img {
+    position: relative;
+    display: inline-block;
+
+}
+
+.content-img h1 {
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    color: black;
+    z-index: 2;
+    font-size: 50px;
+=======
+/* a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    align-items: center;
+}
+nav{
+    margin-left: 50%;
+}
+
+
+
+.inlogo {
+    margin-left: 20px;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 590;
+    font-style: normal;
+}
+
+.content-img {
+    position: relative;
+    display: inline-block;
+    margin-left: 65%;
+    margin-top: 5%;
+    box-shadow: 08px 10px 20px  rgba(0, 0, 0, 0.5) ;
+    border-radius: 2%;
+
+
+}
+
+.content-img h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+    margin-top: 340px;
+}
+
+.yoman {
+    border-radius: 10px;
+} */
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 590;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(129, 129, 129);
+
+}
+
+.yoman {
+    border-radius: 5%;
+}
+
+.menu {
+    text-align: center;
+    letter-spacing: 10%;
+    word-spacing: 10px;
+
+
+}
+
+.abujar {
+    color: black;
+    font-size: 100px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.color {
+    color: rgb(0, 0, 99);
+}
+
+.color1 {
+    color: rgb(0, 99, 0);
+}
+
+.color:hover {
+    color: rgb(0, 99, 0);
+}
+
+.color1:hover {
+    color: rgb(0, 0, 99);
+}
+
+.daftar {
+    color: rgb(0, 99, 0);
+    background-color: white;
+    padding: 20px 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cont {
+    transition-delay: 5ms;
+}
+
+.visi {
+    animation-delay: 5ms;
+    display: grid;
+    gap: 0px;
+}
+
+.visi {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    margin: px auto;
+}
+
+.misi {
+    animation-delay: 5ms;
+    display: grid;
+    gap: 0px;
+}
+
+.misi {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    margin: px auto;
+}
+
+.log {
+text-align: center;
+}
+
+
+.content-img {
+    position: relative;
+    display: inline-block;
+
+}
+
+.content-img h1 {
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    color: black;
+    z-index: 2;
+    font-size: 50px;
+>>>>>>> 75a717d5e279ca24727c880231e21989bdb3dd3f
+}

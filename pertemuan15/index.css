@@ -1,0 +1,48 @@
+p {
+    color: chartreuse;
+    text-align: justify;
+    line-height: 1.5;
+} 
+
+p.paragraf {
+    border: 2px dashed orange;
+    color: cadetblue;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#halaman_utama {
+    background-color: cyan;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+input[type="text"] {
+    border-color: aquamarine;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+}
+
+*{
+   border: 1px solid gray;
+}
+
+a:hover {
+ color: orangered;
+ text-decoration: underline;
+}
+/* selector menggunakan pseude-element*/
+h1::after {
+    content: " (selamat datang di halaman home)";
+    font-size: 16px;
+    color: grey;
+}
+h1::first-letter {
+    color: brown;
+    font-size: 32px;
+}
+
+p::first-line {
+    color:brown ;
+}

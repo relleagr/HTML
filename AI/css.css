@@ -1,0 +1,80 @@
+/* Reset singkat */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --border-radius: 14px;      /* sudut border gambar rounded */
+  --hover-border: #3498db;    /* warna border saat hover (sesuaikan bebas) */
+  --border-gap: #ddd;           /* warna border default gambar jika dibutuhkan */
+  --price-border: #2c3e50;     /* warna border putus-putus di harga */
+  --font-main: 'Poppins', sans-serif; /* font utama untuk nama buah */
+}
+
+body {
+  font-family: var(--font-main);
+  background: #f7f7f7;
+  padding: 40px;
+  color: #333;
+}
+
+.katalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.menu-item:hover {
+  transform: translateY(-2px);
+}
+
+.image-wrap {
+  border-radius: var(--border-radius);
+  padding: 6px;
+  background: #fff;
+  display: inline-block;
+  border: 4px solid transparent; /* placeholder border warna bisa diubah dengan hover jika diinginkan */
+}
+.image-wrap img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: calc(var(--border-radius) - 6px);
+  /* Garis border melengkung pada ujung gambar (rounded) bisa diaplikasikan lewat container atau langsung gambar */
+  /* Tidak menambahkan border di gambar, kita gunakan container untuk mudah hover border color */
+}
+.image-wrap:hover {
+  border-color: var(--hover-border);
+  /* Anda bisa tambahkan efek glow/ warna border lain dengan box-shadow jika mau */
+  transition: border-color 0.25s ease;
+}
+
+/* Nama buah dengan satu font yang konsisten */
+.nama-buah {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 12px 0 8px;
+  letter-spacing: .3px;
+  color: #1f2d3d;
+  /* Jika ingin variasi warna atau efek, bisa tambahkan gradient atau text-shadow */
+}
+
+/* Harga buah: border putus-putus tebal 5px */
+.harga-buah {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 5px dashed var(--price-border);
+  border-radius: 6px;
+  font-weight: 600;
+  color: #2c2c2c;
+  background: #fff;
+}

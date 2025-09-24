@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Bergerak</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+      background-size: 400% 400%;
+      animation: gerakBackground 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      color: white;
+      font-size: 2em;
+    }
+
+    @keyframes gerakBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  Background Bergerak 🎨
+</body>
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Bergerak dan Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 200vh; /* Membuat halaman bisa di-scroll */
+      background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+      background-size: 400% 400%;
+      animation: gerakBackground 15s ease infinite;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .content {
+      padding: 100px;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    @keyframes gerakBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p>Ini adalah halaman dengan background bergerak.</p>
+    <p>Scroll ke bawah untuk melihat lebih banyak konten.</p>
+  </div>
+  <div class="content">
+    <p>Konten tambahan di bagian bawah.</p>
+  </div>
+</body>
+</html>

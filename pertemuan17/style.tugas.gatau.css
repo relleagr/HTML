@@ -1,0 +1,170 @@
+<<<<<<< HEAD
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(87, 87, 87);
+    text-decoration: none;
+}
+.menu{
+    align-items : center;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+
+}
+
+li {
+    display: inline-block;
+    animation-duration: 0.5ms;
+    text-align: center;
+
+
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+nav {
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ip {
+    text-align: left;
+    margin-bottom: -40px;
+    margin-left: 15px;
+
+}
+
+.foto {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.pi {
+    color: white;
+}
+
+.rty {
+    margin-top: 10px;
+    margin-bottom: 15px;
+=======
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(87, 87, 87);
+    text-decoration: none;
+}
+.menu{
+    align-items : center;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+
+}
+
+li {
+    display: inline-block;
+    animation-duration: 0.5ms;
+    text-align: center;
+
+
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+nav {
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ip {
+    text-align: left;
+    margin-bottom: -40px;
+    margin-left: 15px;
+
+}
+
+.foto {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.pi {
+    color: white;
+}
+
+.rty {
+    margin-top: 10px;
+    margin-bottom: 15px;
+>>>>>>> 75a717d5e279ca24727c880231e21989bdb3dd3f
+}
