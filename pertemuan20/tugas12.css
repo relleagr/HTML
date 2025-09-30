@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+body {
+    background: black;
+    margin-bottom: 100px;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+img {
+    width: 600px;
+    height: auto;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    margin: auto;
+    display: block;
+}
+
+h2 {
+    color: green;
+    text-align: justify;
+}
+
+p {
+    color: white;
+    text-align: justify;
+}
+
+ul {
+    color: white;
+}
+.jam {
+    text-align: justify;
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+=======
+>>>>>>> 93e00e8 (tugas16)
 body {
     background: black;
     margin-bottom: 100px;
@@ -78,4 +122,8 @@ ul {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+<<<<<<< HEAD
+=======
+>>>>>>> d0c09ee (Simpan semua perubahan lokal)
+>>>>>>> 93e00e8 (tugas16)
 }

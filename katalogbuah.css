@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 .img-jeruk {
     border: 5px solid royalblue;
@@ -129,4 +132,141 @@ margin-left: 90px;
 }
 .h3-mangga {
     text-align: center;
+=======
+>>>>>>> 93e00e8 (tugas16)
+
+.img-jeruk {
+    border: 5px solid royalblue;
+    border-radius: 5px;
+    width: 200px;
+    margin-left: 50px;
+
+}
+
+.img-mangga {
+    border: 5px solid royalblue;
+    border-radius: 5px;
+    width: 200px;
+    margin-left: 50px;
+
+}
+
+.img-kiwi {
+    border: 5px solid royalblue;
+    border-radius: 5px;
+    width: 200px;
+   margin-left: 50px;
+}
+
+.hargabuah {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 5px dashed;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #2c2c2c;
+    background: #fff;
+margin-left: 90px;
+}
+.poppins-semibold 
+    .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.img-jeruk:hover {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 200px;
+
+}
+
+.img-mangga:hover {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 200px;
+
+}
+
+.img-kiwi:hover {
+    border: 5px solid black ;
+    border-radius: 5px;
+    width: 200px;
+    
+
+}
+.content-kiwi {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: #2c2c2c;
+  color: #fff; 
+  border-radius: 5px;
+}
+.content-kiwi:hover {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: darkolivegreen;
+  color: #fff; 
+  border-radius: 5px;
+}
+.content-jeruk {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: #2c2c2c;
+  color: #fff; 
+  border-radius: 5px;
+}
+.content-jeruk:hover {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: darkolivegreen;
+  color: #fff; 
+  border-radius: 5px;
+}
+.content-mangga {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: #2c2c2c;
+  color: #fff; 
+  border-radius: 5px;
+}
+.content-mangga:hover {
+ width: 300px; 
+  height: 350px; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin: 20px; 
+  background-color: darkolivegreen;
+  color: #fff; 
+  border-radius: 5px;
+}
+
+.h3-kiwi {
+    text-align: center;
+}
+.h3-jeruk {
+    text-align: center;
+}
+.h3-mangga {
+    text-align: center;
+<<<<<<< HEAD
+=======
+>>>>>>> d0c09ee (Simpan semua perubahan lokal)
+>>>>>>> 93e00e8 (tugas16)
 }

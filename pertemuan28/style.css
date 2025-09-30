@@ -1,0 +1,38 @@
+ul.navigasi {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.navigasi li {
+    float: left;
+}
+ul.navigasi li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul.navigasi li a:hover {
+    background-color: #111;
+}
+.container {
+    width: 100%;
+}
+.sidebar {
+    float: left;
+    width: 30%;
+    background-color: #c2c;
+}
+.content {
+    float: right;
+    width: 70%;
+    background-color: #e2e2e2;
+}
+.container-clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
