@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .subheading {
+
+            margin-left: 30px;
+        }
+
+        span {
+            padding: 10px;
+            display: block;
+        }
+
+        #hidden {
+            visibility: hidden;
+            background-color: yellow;
+            height: 100px;
+        }
+        #none {
+            display: none;
+            background-color: yellow;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ini Adalah <span style="color:red;">teks merah</span> di dalam paragraf</p>
+
+    <div style="background-color:lightblue; padding:10px;">
+        Paragraf di dalam div dengan latar belakang biru muda.
+    </div>
+    <!-- ini jika pakai div -->
+    <h1 style="background-color:lightblue; padding:10px;">
+        Paragraf di dalam div dengan latar belakang biru muda.
+    </h1>
+    <!-- ini jika pakai h1 -->
+    <span style="background-color:lightblue; padding:10px;">
+        Paragraf di dalam div dengan latar belakang biru muda.
+    </span>
+    <!-- ini jika pakai span -->
+    <div>
+        <span class="heading">pelatihan</span>
+        <span class="subheading">kurikulum</span>
+        <span class="subheading">materi</span>
+        <span class="subheading">lokasi</span>
+    </div>
+    <div>
+        <span class="heading">perusahaan</span>
+        <span class="subheading">tim</span>
+        <span class="subheading">visi dan misi</span>
+    </div>
+    <div style="display:inline-block; background-color: peachpuff; width: 200px; height: 100px; margin: 10px;">
+        Box 1
+    </div>
+    <div style="display:inline-block; background-color: lightgreen; width: 150px; height: 150px; margin: 10px;">
+        Box 2
+    </div>
+    
+<div id="hidden">
+    Ini adalah teks yang disembunyikan menggunakan visibility: hidden.
+    </div>
+    <div id="none">
+    Ini adalah teks yang disembunyikan menggunakan display: none.
+    </div>
+</body>
+
+</html>

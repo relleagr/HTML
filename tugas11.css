@@ -49,3 +49,27 @@ a:hover {
 =======
 >>>>>>> d0c09ee (Simpan semua perubahan lokal)
 >>>>>>> 93e00e8 (tugas16)
+
+/*contoh penggunaan CSS to HTML menggunakan class*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+/*contoh penggunaan CSS to HTML menggunakan id*/
+#navabar {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*contoh penggunaan CSS to HTML menggunakan elemen*/
+nav {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/*seman

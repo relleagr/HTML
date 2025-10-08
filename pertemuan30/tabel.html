@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Keanu</title>
+  <style>
+    /* === STYLE DASAR === */
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h3 {
+      margin: 0;
+    }
+
+    /* === HEADER === */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 20px 10px;
+      text-align: center;
+      border-bottom: 2px solid #00e0ff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #00e0ff;
+    }
+
+    header p {
+      color: #d3d3d3;
+    }
+
+    /* === FOTO PROFIL === */
+    .foto {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #00e0ff;
+      border-radius: 15px;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 0 15px rgba(0, 224, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .foto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 224, 255, 0.4);
+    }
+
+    .foto img {
+      width: 160px;
+      height: 160px;
+      border-radius: 100%;
+      border: 3px solid #00e0ff;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* === KOTAK UMUM === */
+    .kotak {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #3a9ebd;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0, 224, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .kotak:hover {
+      border-color: #00e0ff;
+      box-shadow: 0 0 25px rgba(0, 224, 255, 0.3);
+    }
+
+    /* === DAFTAR SKILL === */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: rgba(0, 224, 255, 0.15);
+      border: 1px solid rgba(0, 224, 255, 0.4);
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin: 8px 0;
+      transition: background 0.3s ease;
+    }
+
+    li:hover {
+      background: rgba(0, 224, 255, 0.3);
+    }
+
+    /* === TABEL === */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px;
+    }
+
+    th {
+      background-color: rgba(0, 224, 255, 0.2);
+    }
+
+    /* === FORM === */
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #00e0ff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1em;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #00e0ff;
+      box-shadow: 0 0 5px #00e0ff;
+    }
+
+    button {
+      background-color: #00e0ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #00b8d4;
+      transform: scale(1.05);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 600px) {
+      .foto, .kotak {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 1.6em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Portofolio Keanu Abizar Al Ghifary 🧊</h1>
+    <p>"Simplicity with style"</p>
+  </header>
+
+  <div class="foto">
+    <img src="foto-orng-cool.jpg" alt="Foto Keanu" />
+    <h3>Keanu Abizar Al Ghifary 🥶</h3>
+    <p>
+      Seorang pelajar yang penuh semangat dan suka belajar hal baru.  
+      Menyukai desain, teknologi, dan tantangan yang membuat berpikir kreatif.
+    </p>
+  </div>
+
+  <div class="kotak">
+    <h2>🛠 My Skills</h2>
+    <ul>
+      <li>Makan 🍔</li>
+      <li>Tidur 😴</li>
+      <li>Masak 🍳</li>
+    </ul>
+  </div>
+
+  <div class="kotak">
+    <h2>👥 Teman Satu Jurusan</h2>
+    <table>
+      <tr>
+        <th>Nama</th>
+        <th>Jurusan</th>
+      </tr>
+      <tr><td>Faiz ABD</td><td>Matematika & IT</td></tr>
+      <tr><td>Raqilla</td><td>Bisnis</td></tr>
+      <tr><td>Keanu</td><td>Tata Boga</td></tr>
+      <tr><td>Almer.T</td><td>Ome TV</td></tr>
+    </table>
+  </div>
+
+  <div class="kotak">
+    <h2>📩 Hubungi Saya</h2>
+    <form action="submit-form">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="no">No HP</label>
+      <input type="number" id="no" name="no" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+</body>
+</html>
