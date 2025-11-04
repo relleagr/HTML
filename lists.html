@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lists in HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lists.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Lists in HTML</h1>
+  </header>
+
+  <main class="wrap">
+    <section class="cards">
+
+      <article class="card card--red">
+        <div class="card-head">Ordered List</div>
+        <div class="card-body">
+          <ol>
+            <li>Information Gathering</li>
+            <li class="Planning">Planning</li>
+            <li>Design</li>
+            <li class="Development">Development</li>
+            <li>Testing & Deployment</li>
+            <li class="Maintenance">Maintenance</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card card--yellow">
+        <div class="card-head">Unordered List</div>
+        <div class="card-body">
+          <ul class="bulleted">
+            <li>HTML</li>
+            <li>CSS</li>
+              <ul class="circle">
+                <li>SQL</li>
+                <li>PHP</li>
+              </ul>
+            </li>
+            <li>JavaScript</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card card--blue">
+        <div class="card-head">Description List</div>
+        <div class="card-body description">
+          <dl>
+            <dt>HTML</dt>
+            <dd>HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages.</dd>
+            <dt>CSS</dt>
+            <dd>CSS is the acronym of "Cascading Style Sheets". It is the language used to style HTML documents.</dd>
+            <dt>PHP</dt>
+            <dd>PHP is a server scripting language used to build dynamic and interactive Web pages.</dd>
+          </dl>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>

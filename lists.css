@@ -1,0 +1,126 @@
+/* lists.css - styling similar to provided image */
+:root{
+  --bg:#f5f7fb;
+  --card-bg:#ffffff;
+  --shadow: 0 18px 30px rgba(0,0,0,0.12);
+  --accent-red:#ff6b56;
+  --accent-yellow:#ffbf00;
+  --accent-blue:#18a0ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.page-header{
+  background: linear-gradient(90deg,#4b4b4b, #9a9a9a);
+  padding:28px 16px;
+  text-align:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.page-header h1{
+  margin:0;
+  color:#fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight:700;
+  font-size:48px;
+  letter-spacing:1px;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+.wrap{
+  max-width:1080px;
+  margin:30px auto 80px auto;
+  padding:0 18px;
+}
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:28px;
+  align-items:start;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:10px;
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  position:relative;
+  min-height:360px;
+  display:flex;
+  flex-direction:column;
+}
+.card-head{
+  padding:18px 22px;
+  font-weight:700;
+  color:#fff;
+  font-size:20px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.card-body{
+  padding:18px 18px 26px 18px;
+  background:#fff;
+  flex:1 1 auto;
+}
+.card::after{
+  content:'';
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:8px;
+  height:6px;
+  border-radius:6px;
+}
+/* colored variants */
+.card--red .card-head{background:var(--accent-red)}
+.card--red::after{background:#ff8a76}
+.card--yellow .card-head{background:var(--accent-yellow); color:#222}
+.card--yellow::after{background:#ffd65a}
+.card--blue .card-head{background:var(--accent-blue)}
+.card--blue::after{background:#5fc8ff}
+
+/* Ordered list styling */
+.card-body ol{
+  margin:0;
+  padding-left:18px;
+  counter-reset: step;
+}
+.card-body ol li{
+  list-style:none;
+  padding:12px 14px;
+  margin-bottom:8px;
+  background:#f1f1f1;
+  color:#222;
+  border-radius:4px;
+}
+.card-body ol li::before{
+  counter-increment: step;
+  content: counter(step) ". ";
+  font-weight:700;
+  margin-right:8px;
+}
+
+/* Unordered list styling */
+.bulleted{padding-left:14px;margin:0}
+.bulleted > li{list-style:none; padding:12px 14px; margin-bottom:8px; background:#fff}
+.bulleted > li::marker{color:#000}
+.bulleted > li::before{content:"\2022"; color:#111; margin-right:8px}
+
+/* nested circle list */
+.circle{list-style:circle; padding-left:26px; margin:8px 0; background:#f5f5f5; border-radius:4px}
+.circle li{padding:8px 12px; margin:0}
+
+/* Description list styling */
+.description dl{margin:0;}
+.description dt{color:#d32f2f; font-weight:700; margin-top:8px}
+.description dd{margin:6px 0 12px 0; color:#333}
+
+/* responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns: repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .page-header h1{font-size:36px}
+}
