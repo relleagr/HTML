@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 20px;
+}
+
+ /* Container yang membungkus kedua card */
+.card-item {
+    /* Langkah Kunci 1: Mengubahnya menjadi Flex Container */
+    display: flex; 
+
+    /* Langkah Kunci 2: Mengatur jarak antar card */
+    /* Akan membuat item berjejer di baris utama (horizontal) */
+    justify-content: space-around; /* Menyebarkan ruang di sekitar card */
+    /* ATAU: justify-content: flex-start; jika ingin merapat ke kiri */
+    
+    /* Langkah Kunci 3 (Opsional tapi penting): Responsivitas */
+    /* Jika ada banyak card dan lebar layar kecil, card akan pindah ke baris baru */
+    flex-wrap: wrap;
+    
+    /* Tambahkan sedikit jarak di luar container jika perlu */
+    padding: 20px;
+
+    flex-direction: row-reverse;
+}
+
+/* (Opsional) Styling untuk setiap card agar lebarnya tetap proporsional */
+.card-NikeSb .card-NikeBlazer .card-NikeAir {
+    /* Mengatur item flex agar tumbuh/menyusut */
+    flex: 1 1 300px; /* Tumbuh 1, Menyusut 1, Basis lebar 300px */
+    max-width: 45%; /* Memastikan tidak terlalu lebar dan menyisakan ruang untuk card lain */
+    margin: 10px 5px; /* Memberi jarak di antara card */
+}
+.card-NikeSB {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    margin: auto;
+    background-color: white;
+
+}
+
+.card-NikeSB img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-NikeSB h3 {
+    font-size: 0.9em;
+    margin: 12px 0 0px 0;
+    text-align: left;
+}
+
+.p-NikeSB {
+    font-size: 1em;
+    color: #555;
+    margin: 4px 0 0px 0;
+    text-align: left;
+
+}
+
+.p-NikeSBprice {
+    font-size: 1.0em;
+    color: #000;
+    margin: 12px 0 0px 0;
+    text-align: right;
+}
+
+.card-NikeBlazer {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    margin: auto;
+    background-color: white;
+}
+
+.card-NikeBlazer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-NikeBlazer h3 {
+    font-size: 0.9em;
+    margin: 12px 0 0px 0;
+    text-align: left;
+}
+
+.p-NikeBlazer {
+    font-size: 1em;
+    color: #555;
+    margin: 4px 0 0px 0;
+    text-align: left;
+
+}
+
+.p-NikeBlazerprice {
+    font-size: 1.0em;
+    color: #000;
+    margin: 12px 0 0px 0;
+}
+
+.card-NikeAir {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    margin: auto;
+    background-color: white;
+}
+
+.card-NikeAir img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-NikeAir h3 {
+    font-size: 0.9em;
+    margin: 12px 0 0px 0;
+    text-align: left;
+}
+
+.p-NikeAir {
+    font-size: 1em;
+    color: #555;
+    margin: 4px 0 0px 0;
+    text-align: left;
+
+}
+
+.p-NikeAirprice {
+    font-size: 1.0em;
+    color: #000;
+    margin: 12px 0 0px 0;
+}
+
+/* Media Query untuk Layar Kecil (Mobile) - misalnya, lebar di bawah 600px */
+@media (max-width: 600px) {
+    
+    .card-item {
+        /* Opsional: Sesuaikan justify-content untuk meratakan ke tengah jika hanya ada satu card per baris */
+        padding: 0; /* Mungkin hilangkan padding di mobile */
+    }
+    
+    .card-NikeSB .card-NikeBlazer .Card-NikeAir {
+        /* KUNCI: Membuat card mengambil 100% lebar container */
+        width: 95%; 
+        /* Menggunakan 90% atau 95% untuk menyisakan sedikit ruang (padding) di kiri/kanan layar */
+        
+        /* Tambahkan margin vertikal (atas/bawah) agar ada jarak antar card */
+        margin: 15px auto; 
+
+       flex-shrink: 0;
+       flex-grow: 0;
+    }
+}

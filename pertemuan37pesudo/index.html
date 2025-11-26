@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo</title>
+    <style>
+        /* pseudo class */
+        a:hover {
+            color: red;
+        }
+
+        p:first letter {
+            font-size: 24px;
+            color: blue;
+        }
+
+        /* contoh transition 1 */
+        .btn {
+            background-color: green;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /*halus 0.3 detik*/
+        }
+
+        .btn:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        /* contoh transition 2 */
+        .card {
+            width: 120px;
+            height: 120px;
+            background-color: #ffd54f;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease-out, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* contoh timing function */
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: #29b6f6;
+            display: grid;
+            place-items: center;
+            transition: margin-left 1s linear;
+            cursor: auto;
+        }
+
+        .box.ease {
+            transition-timing-function: ease;
+        }
+
+        .box.easein {
+            transition-timing-function: ease-in;
+        }
+
+        .box.easeout {
+            transition-timing-function: ease-out;
+        }
+
+        .box.easeinout {
+            transition-timing-function: ease-in-out;
+        }
+
+        .box:hover {
+            margin-left: 120px;
+        }
+
+        /* contoh animation */
+        @keyframes teksjalan {
+            from {
+                left: 0;
+                opacity: 0.4;
+            }
+
+            to {
+                left: 120px;
+                opacity: 1;
+            }
+        }
+
+        .jalan {
+            position: relative;
+            animation: teksjalan 3s ease-in-out infinite alternate;
+        }
+
+        /* contoh denyut animasi */
+        @keyframes pulse {
+            0% {
+                transfrom: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 111, 97, 6);
+            }
+
+            70% {
+                transform: scale(1.06);
+                box-shadow: 0 0 0 14px rgba(255, 111, 97, 0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            background-color: #ff6f61;
+            color: white;
+            border: 0;
+            padding: 10px 18px;
+            border-radius: 999px;
+            cursor: pointer;
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+
+        /* contoh loading spin */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            width: 36px;
+            height: 36px;
+            border: 4px solid #eee;
+            border-top-color: #42a5f5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* contoh card glow */
+        .kartu {
+            width: 160px;
+            height: 120px;
+            display: grid;
+            place-items: center;
+            background: #fff3cd;
+            border-radius: 16px;
+            box-shadow: 0 12px 20px rgba(255, 193, 7, 0.3);
+            transition: tarnsform 25s ease, box-shadow 25s ease;
+        }
+
+        .kartu:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        /* contoh badge */
+       @keyframes pop {
+        from {
+            transform: scale(1);
+            filter: brightness(1);
+        }
+        to {
+            transform: scale(1.12);
+            filter: brightness(1.2);
+        }
+       }
+       .badge {
+        background: #00c853;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font: 600 12px/1.2px sytem-ui;
+        animation: pop 1.1s ease-out infinite alternate;
+       }
+    </style>
+</head>
+
+<body>
+    <!-- pseudo -->
+    <a href="#">Link Hover Effect</a>
+    <p>First paragraph.</p>
+    <!-- button-ganti warna saat hover -->
+    <button class="btn">Click Me</button>
+    <!-- card-membesar halus -->
+    <div class="card">kartu</div>
+    <!-- timing function -->
+    <div class="box">box</div>
+    <div class="box ease">ease</div>
+    <div class="box easein">easein</div>
+    <div class="box easeout">easeout</div>
+    <div class="box easeinout">ease-in-out</div>
+    <!-- animation -->
+    <h2 class="jalan">HALO, CSS</h2>
+    <!-- denyut animasi -->
+    <button class="pulse">PENCET GA LOOO!!!!!!!!!</button>
+    <!-- loading spin -->
+    <div class="spinner"></div>
+    <!-- card glow -->
+    <div class="kartu">css</div>
+    <!-- badge -->
+    <span class="badge">NEW</span>
+
+</body>
+
+</html>

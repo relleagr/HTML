@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #a691c9;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    transition: transform 0.30s ease-out, box-shadow 0.5s ease;
+}
+.profile-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 3);
+}
+.status-badge {
+    background: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font: 600 12px/1.2px sytem-ui;
+    animation: pop 1.1s ease-out infinite alternate;
+    margin-left: 230px;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(1);
+        filter: brightness(0);
+    }
+
+    to {
+        transform: scale(1.12);
+        filter: brightness(1.2);
+    }
+}
+
+.profile-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.profesi {
+    color: rgb(67, 69, 71);
+    margin: 10px 0 5px 0;
+}

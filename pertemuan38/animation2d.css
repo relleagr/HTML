@@ -1,0 +1,49 @@
+/* rotate effect */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.box:hover {
+    transform: rotate(45deg);
+}
+/* scale effect */
+.box-scale {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top: 20px;
+}
+.box-scale:hover {
+    transform: scale(1.5);
+}
+/* translate effect */
+.box-translate {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-top: 20px;
+}
+.box-translate:hover {
+    transform: translate(50px, 50px);
+}
+/* skew effect */
+.box-skew {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin-top: 20px;
+}   
+.box-skew:hover {
+    transform: skewx(20deg);
+}
+/* crad effect */
+.box-crad {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    margin-top: 20px;
+}
+.box-crad:hover {
+    transform: rotate(20deg) scale(1.2) translate(30px, 30px) skewx(10deg);
+}
