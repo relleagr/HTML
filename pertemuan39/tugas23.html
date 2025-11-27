@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Aesthetic – Motivasi Hidup</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        animation: slideUp 1s ease forwards;
+    }
+
+    .poster {
+        width: 400px;
+        padding: 25px;
+        border-radius: 20px;
+        background: white;
+        border: rgb(58, 58, 58) 2px solid;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        animation: breathing 3s infinite ease-in-out;
+        transition: transform 0.4s;
+    }
+
+    .poster:hover {
+        transform: scale(1.05);
+    }
+
+    /* Judul */
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        margin: 0;
+        background: #ffe3f1;
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 12px;       
+        transition: background 0.4s;
+    }
+
+    h1:hover {
+        background: #fac3df;
+    }
+
+    .subtitle {
+        font-size: 60px;
+    }
+    
+    .quote {
+        font-size: 16px;
+        margin-top: 6px;
+        font-style: italic;
+        color: #555;
+        text-align: center;
+    }
+
+    .fake-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ffb6c1;
+        color: white;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background 0.4s;
+    }
+
+    .fake-btn:hover {
+        background: #ff7088;
+    }
+
+    @keyframes breathing {
+
+        0%,
+        100% {
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        50% {
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body>
+    <div class="poster">
+        <h1>Believe in Yourself</h1>
+        <p class="subtitle"><b>Don’t <br>be afraid<br> to start again</b></p>
+        <p class="quote">“Your journey is unique, jadi jangan bandingkan hidupmu dengan orang lain.”</p>
+        <span class="fake-btn">Get Inspired</span>
+    </div>
+</body>
+
+</html>
