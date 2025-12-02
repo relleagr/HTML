@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman dengan Loader CSS</title>
+  <style>
+    /* Styling untuk Loader */
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      /* Warna latar belakang loader */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      /* Pastikan loader di atas konten lain */
+
+      /* Animasi untuk menghilangkan loader */
+      animation: fadeOut 1s forwards;
+      /* Durasi animasi fade out */
+      animation-delay: 3s;
+      /* Waktu tunggu sebelum fade out dimulai (3 detik) */
+    }
+
+    /* Animasi putar (spinner) */
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      /* Warna spinner */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Keyframes untuk menghilangkan loader */
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loader Screen -->
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Konten Utama Halaman -->
+  <div class="content">
+    <h1>Selamat Datang!</h1>
+    <p>Ini adalah konten utama halaman web Anda yang akan muncul setelah loader menghilang.</p>
+  </div>
+</body>
+
+</html>

@@ -12,18 +12,19 @@
         font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
+         background: linear-gradient(135deg, #ffd1dc, #ffe6b3);
         align-items: center;
         min-height: 100vh;
         animation: slideUp 1s ease forwards;
     }
 
-    .poster {
+    .container-poster {
         width: 400px;
         padding: 25px;
         border-radius: 20px;
         background: white;
-        border: rgb(58, 58, 58) 2px solid;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        background: black;
+        border: rgb(255, 255, 255) 2px solid;
         animation: breathing 3s infinite ease-in-out;
         transition: transform 0.4s;
     }
@@ -40,7 +41,7 @@
         background: #ffe3f1;
         display: inline-block;
         padding: 6px 14px;
-        border-radius: 12px;       
+        border-radius: 12px;
         transition: background 0.4s;
     }
 
@@ -50,30 +51,55 @@
 
     .subtitle {
         font-size: 60px;
+        color: #ff7088;
     }
     
+        @keyframes teksjalan {
+            from {
+                left: 100px;
+                opacity: 2;
+            }
+    
+            to {
+             left: 200px;
+                opacity: 2;
+            }
+        }
+    
+        .jalan {
+            position: relative;
+            animation: teksjalan 3s ease-in-out infinite alternate;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
     .quote {
         font-size: 16px;
         margin-top: 6px;
         font-style: italic;
-        color: #555;
+        color: #ffffff;
         text-align: center;
+        text-shadow: black 0em 0em 0.1em;
     }
 
     .fake-btn {
         display: inline-block;
         padding: 10px 20px;
         background: #ffb6c1;
-        color: white;
+        color: rgb(0, 0, 0);
         border-radius: 10px;
         margin-top: 20px;
         cursor: pointer;
         transition: background 0.4s;
+        animation: pulse 1.2s ease-in-out infinite;
     }
 
     .fake-btn:hover {
         background: #ff7088;
     }
+
+
 
     @keyframes breathing {
 
@@ -98,14 +124,80 @@
             transform: translateY(0);
         }
     }
+
+    @keyframes pulse {
+        0% {
+            transfrom: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 111, 97, 6);
+        }
+
+        70% {
+            transform: scale(1.06);
+            box-shadow: 0 0 0 14px rgba(255, 111, 97, 0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(340, 100%, 76%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        animation: fadeOut 1s forwards;
+        animation-delay: 1s;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #ff6f61;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
 </style>
 
 <body>
-    <div class="poster">
+    <div class="container-poster">
         <h1>Believe in Yourself</h1>
         <p class="subtitle"><b>Don’t <br>be afraid<br> to start again</b></p>
         <p class="quote">“Your journey is unique, jadi jangan bandingkan hidupmu dengan orang lain.”</p>
+        <div class="jalan">Be Stronger</div>
         <span class="fake-btn">Get Inspired</span>
+    </div>
+    <div class="loader-container">
+        <div class="loader"></div>
     </div>
 </body>
 
