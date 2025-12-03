@@ -12,10 +12,10 @@
         font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
-         background: linear-gradient(135deg, #ffd1dc, #ffe6b3);
+        background: url(./pik.jpg) no-repeat center center/cover;
         align-items: center;
         min-height: 100vh;
-        animation: slideUp 1s ease forwards;
+        animation: slideUp 3s ease forwards;
     }
 
     .container-poster {
@@ -29,7 +29,7 @@
         transition: transform 0.4s;
     }
 
-    .poster:hover {
+    .container-poster:hover {
         transform: scale(1.05);
     }
 
@@ -43,6 +43,18 @@
         padding: 6px 14px;
         border-radius: 12px;
         transition: background 0.4s;
+        animation: slidedown 3s ease forwards;
+    }
+    @keyframes slidedown {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        100% {
+            opacity: 2;
+            transform: translateY(0);
+        }
     }
 
     h1:hover {
@@ -52,27 +64,39 @@
     .subtitle {
         font-size: 60px;
         color: #ff7088;
+        animation: slideleft 5s ease forwards;
+    }
+    @keyframes slideleft {
+        0% {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        100% {
+            opacity: 2;
+            transform: translateX(0);
+        }
     }
     
-        @keyframes teksjalan {
-            from {
-                left: 100px;
-                opacity: 2;
-            }
-    
-            to {
-             left: 200px;
-                opacity: 2;
-            }
+    @keyframes teksjalan {
+        from {
+            left: 100px;
+            opacity: 2;
         }
-    
-        .jalan {
-            position: relative;
-            animation: teksjalan 3s ease-in-out infinite alternate;
-            color: white;
-            font-weight: bold;
-            margin-top: 20px;
+
+        to {
+            left: 200px;
+            opacity: 2;
         }
+    }
+
+    .jalan {
+        position: relative;
+        animation: teksjalan 3s ease-in-out infinite alternate;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+    }
 
     .quote {
         font-size: 16px;
@@ -81,6 +105,18 @@
         color: #ffffff;
         text-align: center;
         text-shadow: black 0em 0em 0.1em;
+        animation: swipe 4s ease forwards;
+    }
+    @keyframes swipe {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        100% {
+            opacity: 2;
+            transform: translateX(0);
+        }
     }
 
     .fake-btn {
@@ -195,6 +231,7 @@
         <p class="quote">“Your journey is unique, jadi jangan bandingkan hidupmu dengan orang lain.”</p>
         <div class="jalan">Be Stronger</div>
         <span class="fake-btn">Get Inspired</span>
+
     </div>
     <div class="loader-container">
         <div class="loader"></div>
